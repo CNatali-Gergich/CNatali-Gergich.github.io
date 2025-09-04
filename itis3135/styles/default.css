@@ -1,0 +1,100 @@
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #11161c;
+    color: #fff;
+    padding: 0 2rem 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.12);
+    padding: 1.5rem 2.5rem;
+    max-width: 699px;
+    text-align: center;
+}
+
+a {
+    color: #ff0000;     /* default color for all links */
+}
+
+a:hover {
+    color: #ff00aa;     /* hover color for all links */
+}
+
+
+footer {
+    background: #11161c;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+figure {
+    font-style: italic;
+}
+
+/* Introduction page only */
+.introduction main p{
+    text-align: left;
+}
+
+/* Fix bullet alignment on introduction page */
+.introduction ul {
+    text-align: left;
+    padding-left: 1rem;   /* pushes bullets in just enough */
+    margin-left: 0;          /* no extra margin so they align with text */
+}
+
+.introduction li {
+    text-align: left;
+    margin-bottom: 0.5rem;   /* space between bullets */
+    line-height: 1.6;        /* clean multi-line alignment */
+}
+
+/* Nested lists (like hollow bullets under Courses) */
+.introduction ul ul {
+    padding-left: 2rem;   /* extra indent for nested lists */
+    list-style-type: circle; /* ensures hollow bullets (circle style) */
+}
+
+/* Quote author */
+.introduction blockquote footer {
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* Quote author */
+.introduction blockquote p {
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.introduction .card h2 {
+   padding-top: 0rem;
+}
+
+.contract main p {
+    text-align: left;
+    line-height: 1.6;
+}
