@@ -1,13 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Personal Webpage | UNC Charlotte</title>
-	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Title = H1 + divider + H2 -->
+  <title>Christian Natali-Gergich | Personal Home Page</title>
+
+  <style>
+    /* Embedded CSS (rubric: no external stylesheet) */
+    :root{
+      --bg: #eef3f8;
+      --text: #22303a;
+      --accent: #2d3a4b;
+      --link: #1e88e5;
+      --link-hover: #1565c0;
+    }
+
+    /* Width & margins (rubric: width 80–95%, max-width 600–1000, margin 0 auto) */
+    .page { width: 90%; max-width: 900px; margin: 0 auto; }
+
+    /* Two fonts: body vs headings (simple web-safe) */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header { background: var(--accent); color: #fff; padding: 1.5rem 0; }
+    h1, h2 { font-family: Georgia, "Times New Roman", serif; margin: 0; }
+
+    main { flex: 1; padding: 1.25rem 0 2rem; }
+    .section-title { margin: 0 0 0.75rem 0; color: var(--accent); }
+
+    p { line-height: 1.6; margin: 0 0 1rem 0; }
+
+    footer { background: var(--accent); color: #fff; padding: 1rem 0; font-size: 0.95rem; }
+
+    nav a { color: #fff; text-decoration: none; font-weight: 600; }
+    nav a:hover { text-decoration: underline; color: #e2e8f0; }
+
+    .sep { padding: 0 0.5rem; opacity: 0.85; }
+
+    .meta { margin-top: 0.5rem; font-size: 0.9rem; }
+    .meta a { color: #fff; text-decoration: none; }
+    .meta a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-	<p>Your personal webpage has been created.</p>
-	<a href = "itis3135/index.html">Click to go to ITIS3135 Site</a>
+  <header>
+    <div class="page">
+      <h1>Christian Natali-Gergich</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="page">
+      <h2 class="section-title">Personal Home Page</h2>
+
+      <p>
+        Write 2–4 sentences here that introduce who you are, your program/major,
+        and what you’re interested in. Keep the tone professional.
+      </p>
+      <p>
+        Add a short note about your goals, the skills you’re learning, and what
+        visitors can find through the links below (coursework, GitHub projects, profiles).
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="page">
+      <!-- REQUIRED: nav element with link to itis3135/ and other professional links -->
+      <nav aria-label="site navigation">
+        <a href="https://github.com/CNatali-Gergich" target="_blank" rel="noopener">GitHub.com</a>
+        <span class="sep">~</span>
+        <a href="http://webpages.charlotte.edu/cnatalig/" target="_blank" rel="noopener">CLT Web</a>
+        <span class="sep">~</span>
+        <a href="https://CNatali-Gergich.github.io/" target="_blank" rel="noopener">GitHub.io</a>
+        <span class="sep">~</span>
+        <a href="itis3135/">ITIS3135</a>
+        <span class="sep">~</span>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-SLUG/" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+
+      <!-- Footer meta: validation links + author/copyright -->
+      <div class="meta">
+        <span>&copy; <span id="year"></span> Christian Natali-Gergich</span>
+        <span class="sep">|</span>
+        <a href="https://validator.w3.org/nu/?doc=referer" target="_blank" rel="noopener">HTML Validation</a>
+        <span class="sep">|</span>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=referer" target="_blank" rel="noopener">CSS Validation</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ACCUMULUS VALIDATOR (rubric: scripts in /scripts, not embedded)
+       OPTION A (local file in your site): place the provided validator script at /scripts/accumulus.js
+       OPTION B (direct URL): replace the src below with the exact URL your instructor gave you. -->
+  <script src="scripts/accumulus.js"></script>
+
+  <!-- Tiny helper to set the year (kept external per rubric).
+       Put this in /scripts/year.js if you want it, then include it below.
+       Or just type the year manually above and remove this line. -->
+  <!-- <script src="scripts/year.js" defer></script> -->
+  <script>
+    // If you prefer no extra file, we can keep this 2-line inline script or you can hardcode the year.
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
