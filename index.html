@@ -1,13 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Personal Webpage | UNC Charlotte</title>
-	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+
+  <!-- Title = H1 + divider + H2 -->
+  <title>Christian Natali-Gergich | Landing Page</title>
+
+  <style>
+    :root{
+      --bg: #eef3f8;
+      --text: #22303a;
+      --accent: #2d3a4b;
+      --link: #1e88e5;
+      --link-hover: #1565c0;
+    }
+
+    .page { width: 90%; max-width: 900px; margin: 0 auto; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header { background: var(--accent); color: #fff; padding: 1.5rem 0; }
+    h1, h2 { font-family: Georgia, "Times New Roman", serif; margin: 0; }
+
+    main { flex: 1; padding: 1.25rem 0 2rem; }
+    .section-title { margin: 0 0 0.75rem 0; color: var(--accent); }
+
+    p { line-height: 1.6; margin: 0 0 1rem 0; }
+
+    footer { background: var(--accent); color: #fff; padding: 1rem 0; font-size: 0.95rem; }
+
+    nav a { color: #fff; text-decoration: none; font-weight: 600; }
+    nav a:hover { text-decoration: underline; color: #e2e8f0; }
+
+    .sep { padding: 0 0.5rem; opacity: 0.85; }
+
+    .meta { margin-top: 0.5rem; font-size: 0.9rem; }
+    .meta a { color: #fff; text-decoration: none; }
+    .meta a:hover { text-decoration: underline; }
+  </style>
+
+  <!-- Accumulus validator (allowed, not embedded code) -->
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<p>Your personal webpage has been created.</p>
-	<a href = "itis3135/">Click to go to ITIS3135 Site</a>
+  <header>
+    <div class="page">
+      <h1>Christian Natali-Gergich</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="page">
+      <h2 class="section-title">Hello!, Welcome to my personal Home Page</h2>
+
+      <p>
+        My name is <strong>Christian Natali-Gergich</strong>, I am a Computer Science major at UNC Charlotte with a concentration in Software Engineering.
+        Outside of academics, I enjoy fishing, biking, hiking, and playing sports. These hobbies help me stay balanced and bring creativity
+        into my work.
+      </p>
+
+      <p>
+        My goal is to complete my bachelor's degree at UNC Charlotte while continuing to develop my skills in programming languages,
+        software design, and implementation. Visitors can explore the links below to connect with my professional profiles, view my GitHub projects,
+        and access my course work hosted on both my UNC Charlotte webpage and GitHub Pages.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="page">
+      <nav aria-label="site navigation">
+        <a href="https://github.com/CNatali-Gergich" target="_blank" rel="noopener">GitHub.com</a>
+        <span class="sep">~</span>
+        <a href="http://webpages.charlotte.edu/cnatalig/" target="_blank" rel="noopener">CLT Web</a>
+        <span class="sep">~</span>
+        <a href="https://cnatali-gergich.github.io/" target="_blank" rel="noopener">GitHub.io</a>
+        <span class="sep">~</span>
+        <a href="itis3135/">ITIS3135</a>
+        <span class="sep">~</span>
+        <a href="https://www.linkedin.com/in/christian-natali-gergich/" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+
+      <div class="meta">
+        <span>&copy; 2025 Christian Natali-Gergich</span>
+        <span class="sep">|</span>
+        <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+        <img src="itis3135/images/button-valid-html5.gif" width="88" height="31" alt="Validate webpage HTML." >
+        </a>
+
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+        <img src="itis3135/images/button-valid-css.gif" width="88" height="31" alt="Validate webpage CSS." >
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
