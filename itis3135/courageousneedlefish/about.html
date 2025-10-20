@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courageous Needlefish | About</title>
+
+  <!--
+    Color scheme:
+    https://coolors.co/012622-f2f3ae-fc6471-3f88c5-fcbfb7
+  -->
+
+  <style>
+    :root {
+      --dark: #012622;
+      --light: #F2F3AE;
+      --highlight: #FC6471;
+      --accent: #3F88C5;
+      --soft: #FCBFB7;
+    }
+    body {
+      margin: 0;
+      background: var(--light);
+      color: var(--dark);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header, footer {
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    h1 {
+      margin: 0.2em 0;
+      font-size: clamp(1.8rem, 2.5vw + 1rem, 2.4rem);
+    }
+    nav a {
+      color: var(--light);
+      margin: 0 0.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: var(--highlight);
+      text-decoration: underline;
+    }
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+    }
+    h2 {
+      color: var(--accent);
+    }
+    p {
+      margin-block: 1rem;
+      line-height: 1.5;
+    }
+    footer em {
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--highlight);
+    }
+    footer a {
+      color: var(--light);
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: var(--soft);
+    }
+    .validate {
+      margin-top: 1rem;
+    }
+    .validate img {
+      width: 88px;
+      height: 31px;
+      margin: 0 0.3rem;
+      vertical-align: middle;
+    }
+  </style>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Courageous Needlefish</h1>
+    <nav>
+      <a href="./">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="../index.html">Course Site</a>
+    </nav>
+    <em>“Hooking you up with the best un-hooking tools in the sea.”</em>
+  </header>
+
+  <main>
+    <h2>About Courageous Needlefish</h2>
+    <p>
+      Courageous Needlefish began with a single idea: make the best hook remover tool an angler could trust.
+      After hours on the water and frustrating catches that took more time to release than to land,
+      we set out to design tools that merged precision, safety, and style.
+    </p>
+    <p>
+      Today, we create a variety of hook removal tools including pliers, grippers, and other modern tackle-accessories that
+      operate as smoothly as they look. Each tool is crafted for durability, ease of use, and standout
+      performance so you can focus on the catch and not the equipment.
+    </p>
+  </main>
+
+  <footer>
+    <p>Page created by <a href="../gergichdesigns.com/">Gergich Designs</a></p>
+    <em>“Hooking you up with the best un-hooking tools in the sea.”</em>
+    <div class="validate">
+      <a href="https://validator.w3.org/check?uri=referer">
+        <img src="../images/button-valid-html5.gif" alt="Validate HTML">
+      </a>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img src="../images/button-valid-css.gif" alt="Validate CSS">
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
