@@ -9,15 +9,15 @@
   <!--
     Coolors palette (saved in URL):
     https://coolors.co/f3e9dc-1c1d21-8789c0-826754-f08700
-    f3e9dc (linen)  |  1c1d21 (rich black)  |  8789c0 (cool gray-lavender)
-    826754 (coffee) |  f08700 (orange)
+    fff6e8 (light cream)  |  1c1d21 (rich black)  |  8789c0 (cool gray-lavender)
+    826754 (coffee) |  d87500 (orange)
   -->
 
   <style>
     :root{
-      --paper: #f3e9dc;
+      --paper: #fff6e8;;
       --ink:   #1c1d21;
-      --brand: #f08700;
+      --brand: #d87500;
       --accent:#8789c0;
       --muted: #826754;
     }
@@ -94,7 +94,8 @@
       color: var(--brand);
       text-decoration: none;
     }
-    a:visited{ color: var(--brand); }
+    a:visited{ color: var(--brand);
+               text-decoration: none; }
     a:hover{ color: var(--accent); text-decoration: underline; }
     a:active{ color: var(--muted); }
     footer p{ margin: 6px 0; }
@@ -108,9 +109,10 @@
       gap: 10px;
       flex-wrap: wrap;
     }
-    .meta span.sep {
-      color: var(--muted);
+    .sep {
+      color: #2a2a2a;
     }
+
     .meta img {
       vertical-align: middle;
       border: 0;
