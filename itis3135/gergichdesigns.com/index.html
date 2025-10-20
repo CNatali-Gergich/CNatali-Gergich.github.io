@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Gergich Designs — professional web design and development firm specializing in responsive, accessible, and creative digital experiences.">
+  <title>Gergich Designs — Web Design & Development</title>
+
+  <!--
+    Coolors palette (saved in URL):
+    https://coolors.co/f3e9dc-1c1d21-8789c0-826754-f08700
+    f3e9dc (linen)  |  1c1d21 (rich black)  |  8789c0 (cool gray-lavender)
+    826754 (coffee) |  f08700 (orange)
+  -->
+
+  <style>
+    :root{
+      --paper: #f3e9dc;
+      --ink:   #1c1d21;
+      --brand: #f08700;
+      --accent:#8789c0;
+      --muted: #826754;
+    }
+
+    /* Header */
+    header{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 28px 0 12px;
+      border-bottom: 4px solid var(--brand);
+    }
+
+    /* Main */
+    main{ padding-block: 26px; }
+
+    /* Footer */
+    footer{
+      margin-top: auto;
+      padding: 18px 0 36px;
+      border-top: 4px solid var(--brand);
+      text-align: center;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+      display: flex;
+      flex-direction: column;
+    }
+    header, main, footer{
+      width: min(1000px, 92vw);
+      margin-inline: auto;
+    }
+    header img{
+      inline-size: 72px;
+      block-size: 72px;
+      border-radius: 14px;
+    }
+    h1{
+      margin: 0;
+      font-size: clamp(1.6rem, 2vw + 1rem, 2.4rem);
+      letter-spacing: .2px;
+    }
+    h1 span{ color: var(--brand); }
+    h2{
+      margin: 0 0 10px 0;
+      color: var(--brand);
+      font-size: clamp(1.25rem, 1.2vw + 1rem, 1.75rem);
+    }
+    p{ margin-block: 0 16px; }
+    ul{
+      margin: 12px 0 24px;
+      padding-left: 1.5rem;
+    }
+    li{ margin: 6px 0; }
+    li::marker{
+      content: "◆  ";
+      color: var(--accent);
+      font-size: 1.1em;
+    }
+    address{
+      font-style: normal;
+      padding: 14px 16px;
+      border-left: 6px solid var(--muted);
+      background: #ffffffcc;
+      border-radius: 10px;
+    }
+    a{
+      color: var(--brand);
+      text-decoration: none;
+    }
+    a:visited{ color: var(--brand); }
+    a:hover{ color: var(--accent); text-decoration: underline; }
+    a:active{ color: var(--muted); }
+    footer p{ margin: 6px 0; }
+    footer small{ color: #2a2a2a; }
+
+    .meta {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .meta span.sep {
+      color: var(--muted);
+    }
+    .meta img {
+      vertical-align: middle;
+      border: 0;
+    }
+  </style>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <h1>
+      <img src="images/gd-logo.png" alt="Gergich Designs Logo" width="100" height="100" style="vertical-align: middle;">
+      Gergich Designs
+    </h1>
+  </header>
+
+  <main>
+    <h2>Gergich Designs Services</h2>
+    <p>
+      Gergich Designs is a web design & development firm focused on clarity, speed, and accessibility.
+      We craft semantic, standards-compliant sites with strong visual systems and WCAG-conscious contrast,
+      so your message lands beautifully on any device.
+    </p>
+
+    <ul>
+      <li>Semantic, standards-based builds with progressive enhancement.</li>
+      <li>Responsive, mobile-first layouts tuned for Core Web Vitals.</li>
+      <li>Design systems and component libraries for consistent UI.</li>
+      <li>Accessible color palettes and clear typography hierarchies.</li>
+      <li>SEO-friendly structure and fast time-to-interactive.</li>
+      <li>Rapid prototyping and collaborative iteration.</li>
+      <li>Performance audits and UX polish for existing sites.</li>
+      <li>Clear handoff docs and lightweight client training.</li>
+    </ul>
+
+    <p>
+      Ready to launch or level-up your web presence? Tell us about your goals and timeline—we’ll propose
+      a clear, practical path forward.
+    </p>
+
+    <address>
+      <strong>Gergich Designs</strong><br />
+      123 Studio Lane, Suite 200<br />
+      Charlotte, NC 28202<br />
+      <a href="mailto:hello@gergichdesigns.com">hello@gergichdesigns.com</a> ·
+      <a href="tel:+1-704-555-0199">(704) 555-0199</a>
+    </address>
+  </main>
+
+  <footer>
+    <p><em>“Make it clear. Make it fast. Make it beautiful.”</em></p>
+    <p><small>© <span id="year"></span> Gergich Designs — Web Design & Development</small></p>
+
+    <div class="meta">
+      <span>&copy; 2025 Christian Natali-Gergich</span>
+      <span class="sep">|</span>
+      <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+        <img src="images/button-valid-html5.gif" width="88" height="31" alt="Validate webpage HTML.">
+      </a>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+        <img src="images/button-valid-css.gif" width="88" height="31" alt="Validate webpage CSS.">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
