@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Christian Natali-Gergich | Fishing Adventures</title>
+	<style>
+		/* Color Palette */
+		:root {
+			--teagreen: #D1F0B1;
+			--sandybrown: #FFB17A;
+			--night: #060E0E;
+			--taupegrey: #8C8A93;
+			--blackbean: #440D0F;
+		}
+
+		/* General Styles */
+		body {
+			margin: 0;
+			font-family: 'Segoe UI', Roboto, sans-serif;
+			background-color: var(--night);
+			color: var(--teagreen);
+			line-height: 1.6;
+		}
+
+		header {
+			background-color: var(--blackbean);
+			color: var(--teagreen);
+			text-align: center;
+			padding: 1rem 0;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: 2rem;
+			letter-spacing: 1px;
+		}
+
+		nav {
+			text-align: center;
+            margin-top: 0.5rem;
+		}
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        nav li {
+            display: inline;
+        }
+
+		nav a {
+			color: var(--sandybrown);
+			margin: 0 0.5rem;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		nav a:hover {
+			color: var(--taupegrey);
+		}
+
+        .divider {
+            color: var(--teagreen);
+            opacity: 0.7;
+        }
+
+		main {
+			padding: 1.5rem;
+			max-width: 900px;
+			margin: auto;
+			background-color: rgba(209, 240, 177, 0.05);
+			border-radius: 8px;
+		}
+
+		section {
+			display: none;
+		}
+
+		.active {
+			display: block;
+		}
+
+		h2 {
+			color: var(--sandybrown);
+			border-bottom: 2px solid var(--sandybrown);
+			padding-bottom: 0.3rem;
+		}
+
+		figure {
+			text-align: center;
+			margin: 1.5rem 0;
+		}
+
+		figure img {
+			width: 100%;
+			max-width: 450px;
+			border-radius: 10px;
+			border: 3px solid var(--taupegrey);
+		}
+
+		figcaption {
+			font-style: italic;
+			color: var(--taupegrey);
+			margin-top: 0.5rem;
+		}
+
+        #who .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap; /* Allows stacking on small screens */
+            margin: 2rem 0;
+        }
+
+        #who .image-row figure {
+            flex: 1 1 400px;
+            max-width: 450px;
+            text-align: center;
+        }
+
+		/* Footer */
+        footer {
+			background-color: var(--blackbean);
+			color: var(--sandybrown);
+			text-align: center;
+			padding: 1rem;
+			font-size: 0.9rem;
+			margin-top: 2rem;
+		}
+
+		footer a {
+			color: var(--teagreen);
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		footer a:hover {
+			color: var(--taupegrey);
+		}
+
+		.validate img {
+			width: 88px;
+			height: 31px;
+			margin: 0 0.3rem;
+			vertical-align: middle;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin: 1rem 0;
+		}
+
+		th, td {
+			border: 1px solid var(--taupegrey);
+			padding: 0.5rem;
+			text-align: center;
+		}
+
+		th {
+			background-color: var(--sandybrown);
+			color: var(--night);
+		}
+
+		/* Divider Emoji */
+		.divider {
+			color: var(--teagreen);
+			opacity: 0.7;
+		}
+	</style>
+	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<!-- Header -->
+	<header>
+		<h1>Fishing Adventures</h1>
+		<nav>
+            <ul class="nav-list">
+                <li><a href="#" onclick="showSection('what')">What</a></li>
+                <li><span class="divider">🎣</span></li>
+                <li><a href="#" onclick="showSection('who')">Who</a></li>
+                <li><span class="divider">🎣</span></li>
+                <li><a href="#" onclick="showSection('when')">When</a></li>
+                <li><span class="divider">🎣</span></li>
+                <li><a href="#" onclick="showSection('where')">Where</a></li>
+                <li><span class="divider">🎣</span></li>
+                <li><a href="#" onclick="showSection('how')">How</a></li>
+                <li><span class="divider">🎣</span></li>
+                <li><a href="#" onclick="showSection('why')">Why</a></li>
+                <li><span class="divider">🎣</span></li>
+                <li><a href="#" onclick="showSection('ai')">AI Prompts</a></li>
+            </ul>
+        </nav>
+
+	</header>
+
+	<!-- Main Content -->
+	<main>
+
+		<!-- What -->
+        <section id="what" class="active">
+            <h2>What is Fishing?</h2>
+            <p>Fishing, in of itself, is using bait, a line, and a hook to catch fish either for fun or for food. But to me, it's more than just catching fish. It's a way to slow down, reconnect with nature, and let all of my problems disappear. I've been fishing for as long as I can remember, mostly in freshwater lakes and reservoirs chasing largemouth bass and catfish. Whether I'm fly fishing, casting from a pier, or spending the day out on the boat, every cast brings a sense of calm and anticipation that's hard to find anywhere else.</p>
+
+            <figure>
+                <img src="images/bass.jpg" alt="6.17 lb Largemouth Bass Caught on Upstate NY Reservoir">
+                <figcaption>6.17 lb largemouth bass on a reservoir in upstate New York.</figcaption>
+            </figure>
+
+            <p>Fishing is meaningful to me because it's a time to let go of life's stress, enjoy the peaceful sounds of the water and my surroundings, and focus on the moment. It's as much about the experience as it is the catch. Whether I'm with my dad, my girlfriend, or just enjoying a quiet day alone, it's where I find myself most relaxed.</p>
+        </section>
+
+
+		<!-- Who -->
+        <section id="who">
+            <h2>Who Am I?</h2>
+            <p>I am Christian Natali-Gergich, I started fishing when I was very young with both of my parents, but my dad was the one who first introduced me to it. Some of my earliest memories are of us out on the water together, learning how to cast and waiting patiently for a bite. Over the years, fishing has grown into something that connects me not just to my family, but to the outdoors and the peacefulness it brings.</p>
+
+            <div class="image-row">
+                <figure>
+                    <img src="images/me.jpg" alt="Christian holding a largemouth bass on a reservoir in New York">
+                    <figcaption>Caught a largemouth bass on a calm evening at the reservoir in New York.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/gf.jpg" alt="Fishing with my girlfriend on a pier">
+                    <figcaption>Teaching my girlfriend how to fish on one of our weekend trips to the beach together.</figcaption>
+                </figure>
+            </div>
+
+            <p>My mom and dad both fished with me when I was growing up, and now I share that same love for fishing with my girlfriend. When we first started dating, she had never fished before, so we started with the basics and went from there. One of my favorite memories with her is when we crossed large rocks in a river to find the perfect spot and ended up catching small flathead catfish while sitting on a boulder in the middle of the water. With my dad, my favorite memory will always be the day I caught my first big largemouth bass with him by my side.</p>
+        </section>
+
+
+		<!-- When -->
+		<section id="when">
+            <h2>When to Go Fishing</h2>
+            <p>Any time is a good time to fish. For me however, spring is my favorite season to fish. The weather is perfect, the vegetation is in full bloom, and everything feels alive again. Spending a day on the water during this time is peaceful and refreshing, making every trip out something to look forward to.</p>
+
+            <figure>
+                <img src="images/flyfish.JPG" alt="Fly fishing during the middle of the day on calm water">
+                <figcaption>Fly fishing during the spring on calm water.</figcaption>
+            </figure>
+
+            <p>I try to go fishing whenever I have the time, but my favorite is catfishing late in the evening into the night. Waiting and hearing the line run once they pick up your bait is an exilerating experience. Each season brings something different, and that's what keeps it exciting.</p>
+
+            <table>
+                <tr><th>Season</th><th>Bass Activity</th><th>Depth Preference</th></tr>
+                <tr><td>Winter</td><td>Bass become very sluggish and move slowly, staying near cover and deeper areas where the water stays warmer. Patience is key during this time of year.</td><td>Deep</td></tr>
+                <tr><td>Spring</td><td>Bass start becoming more active as the water warms and feed heavily in preparation for spawning season, making this one of the best times to fish for them.</td><td>Shallow to Moderate</td></tr>
+                <tr><td>Spawn</td><td>During the spawn, bass become aggressive as they protect their nests. They strike hard, but it's important to handle fish responsibly and avoid stressing them too much, this goes for all seasons.</td><td>Shallow (Near Beds)</td></tr>
+                <tr><td>Summer</td><td>Bass activity peaks but they can be scattered, feeding early and late while retreating to cooler water during the hottest parts of the day.</td><td>Deep or Under Cover Midday, Shallow Early and Late</td></tr>
+                <tr><td>Fall</td><td>Bass feed heavily to build energy for winter, chasing baitfish near the surface and making this a great time for spinner and swimbaits.</td><td>Shallow</td></tr>
+            </table>
+        </section>
+
+
+		<!-- Where -->
+		<section id="where">
+            <h2>Best Places to Fish</h2>
+            <p>Fishing spots can be found just about anywhere, from quiet ponds to massive lakes and open coastlines. Everyone has their favorite place, but part of the fun is exploring new waters and finding hidden gems that others might overlook. Whether you're looking for calm lakes or crashing waves, there's always a good spot waiting.</p>
+
+            <figure>
+                <img src="images/spottedseatrout.jpg" alt="Fishing Off the Coast">
+                <figcaption>Catching a spotted seatrout off the Carolina coast during a very windy evening.</figcaption>
+            </figure>
+
+            <p>For me, a few special spots stand out. <strong>Badin Lake</strong> in North Carolina is where I caught my first catfish and where I continue to catch big ones to this day. <strong>Canadarago Lake</strong> and a nearby <strong>reservoir</strong> in upstate New York are close to my heart because they're near my grandma's house, and I grew up fishing there every summer. The beaches along the North and South Carolina coast are special too, because they hold some of my favorite memories. Early mornings, the smell of the ocean, and the anticipation of that first bite.</p>
+
+            <p>For anyone looking for places to fish, try searching for nearby lakes or rivers. Even a quick look at <strong>Google Maps</strong> can reveal plenty of local spots. If you don't drive yet, consider finding a pond or creek within walking or biking distance. Just make sure you're fishing legally and not trespassing on private property.</p>
+        </section>
+
+
+		<!-- How -->
+		<section id="how">
+            <h2>How to Fish</h2>
+            <p>When it comes to fishing, there's no single right way to do it. A spinning rod is always a great starting point because it's extremely versatile and can be used in almost any situation. Whether you're casting from the bank, a boat, or a pier, a spinning rod lets you do it all. Having a good mix of artificial lures and live bait is key. Worms are a simple and effective choice, and you can even catch your own bait with them. For saltwater fishing, a sabiki rig works well for catching baitfish, and shrimp are great for just about anything in the ocean. Then just wait for a bite, give it a firm tug upwards and you're on!</p>
+
+            <figure>
+                <img src="images/chainpickerel.jpg" alt="Chain Pickerel Catch">
+                <figcaption>Holding a chain pickerel. A very aggressive freshwater fish.</figcaption>
+            </figure>
+
+            <p>For bass, my go-to lure is a dropshot when the fish are sluggish or down deep, but a jerkbait works great when they're active. For catfish, I like to use worms or baitfish such as sunfish or shad. The main thing I've learned over the years is not to get stuck on one lure or bait. Try different techniques and setups until you find what works. Patience is just as important. On some days the fish bite non-stop, and other days it's slow. Fishing isn't always about catching a lot. It's about enjoying being on the water, the company, and the experience itself.</p>
+
+            <form onsubmit="showSection('why'); return false;">
+                <label for="favfish">What's your favorite fish to catch?</label><br>
+                <input type="text" id="favfish" name="favfish"><br><br>
+                <label for="experience">Your experience level:</label><br>
+                <select id="experience" name="experience">
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                </select><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+		<!-- Why -->
+		<section id="why">
+            <h2>Why I Love Fishing</h2>
+            <p>Fishing has always been more than just a hobby to me. It's the peace and quiet when I'm alone, the beauty of the water and my surroundings, and the time spent with the people I care about. It's also the excitement of the fight and the rush when I finally catch one, especially a big one. Every trip is different, and that's what keeps me coming back.</p>
+
+            <figure>
+                <img src="images/catfish.jpg" alt="Biggest Catfish Catch">
+                <figcaption>One of my biggest catfish, proof that patience and persistence pay off.</figcaption>
+            </figure>
+
+            <p>What I love most about fishing is how unpredictable it is. The weather changes, the fish behave differently each season, and no two days are ever the same. There's also something special about being genuinely happy for the people you're fishing with when they hook into one. Early mornings are my favorite. Stepping into the brisk air, watching the sunrise, and hearing the world slowly wake up. It always brings me back to the best memories and reminds me why I love it so much.</p>
+        </section>
+
+        <!-- AI Prompts -->
+        <section id="ai">
+            <h2>AI Prompts & Tools Used</h2>
+            <p><strong>Model Used:</strong> ChatGPT (GPT-5)</p>
+
+            <p>This website was designed and written by me, with the help of AI for organization, formatting, and ensuring that the text followed correct grammar and punctuation. No AI-generated images were used — all photos are original and personally taken.</p>
+
+            <h3>Prompts Used</h3>
+            <ul>
+                <li>“Format this paragraph and fix punctuation without changing my tone.”</li>
+                <li>“Check my indentations without changing any code.”</li>
+                <li>“Help me go to the Why section instead of What after submitting the form located in the How section.”</li>
+                <li>“Help me correctly format this image.”</li>
+            </ul>
+
+            <p><em>All content and images reflect my own experiences. AI was used only to assist with layout, formatting, and technical code guidance.</em></p>
+        </section>
+
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<p>Designed by <a href="../gergichdesigns.com/" target="_blank" style="color:#d1f0b1; font-weight:bold;">Gergich Designs</a> &copy; 2025</p>
+		<div class="validate">
+			<a href="https://validator.w3.org/check?uri=referer" target="_blank"><img src="../images/button-valid-html5.gif" alt="Valid HTML5"></a>
+			<a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img src="../images/button-valid-css.gif" alt="Valid CSS"></a>
+		</div>
+	</footer>
+
+	<!-- JavaScript -->
+	<script>
+		function showSection(id) {
+			document.querySelectorAll("section").forEach((sec) => {
+				sec.classList.remove("active");
+			});
+			document.getElementById(id).classList.add("active");
+		}
+
+		window.onload = function () {
+			showSection("what");
+
+            /* Form behavior: after submit, go to WHY section instead of reloading */
+		    const form = document.querySelector("form");
+		    form.addEventListener("submit", function (event) {
+                event.preventDefault(); /* stop page refresh */
+                showSection("why"); /* show WHY section */
+                window.scrollTo({ top: 0, behavior: "smooth" }); /* optional smooth scroll to top */
+            });
+		};
+	</script>
+
+</body>
+</html>
