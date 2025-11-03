@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christian Natali-Gergich Courageous Needlefish | ITIS3135 Introduction Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/default.css">
+  <style>
+    
+    body, main, form, input, textarea, label, h2, h3, ul, li, p {
+      text-align: left;
+      font-family: 'Montserrat', sans-serif;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    fieldset {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      padding: 1rem 1.5rem;
+    }
+    legend {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    label {
+      display: block;
+      margin-top: 0.8rem;
+      font-weight: 500;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 0.25rem;
+      font-size: 1rem;
+    }
+    textarea {
+      min-height: 60px;
+    }
+    button {
+      background-color: #0366d6;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #024fa0;
+    }
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .course {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 0.8rem;
+      margin-bottom: 0.8rem;
+      background: #fafafa;
+    }
+    .course input {
+      margin-bottom: 0.5rem;
+    }
+    .course-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
+    .course-actions button {
+      background: #555;
+    }
+    .course-actions .deleteCourse {
+      background: #c62828;
+    }
+    #result img {
+      display: block;
+      margin: 1rem auto;
+      max-width: 300px;
+      max-height: 300px;
+      border-radius: 8px;
+    }
+
+    footer, footer .page, footer nav, footer p {
+      text-align: center !important;
+    }
+    
+  </style>
+</head>
+
+<body class="introduction">
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <div class="card">
+      <h2>Introduction Form</h2>
+      <form id="introForm">
+        <fieldset>
+          <legend>Basic Info</legend>
+          <label>First Name <input type="text" name="firstName" value="Christian" required></label>
+          <label>Middle Initial <input type="text" name="middleName" placeholder="Middle Initial"></label>
+          <label>Preferred Name <input type="text" name="nickname" placeholder="Preferred name"></label>
+          <label>Last Name <input type="text" name="lastName" value="Natali-Gergich" required></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Mascot</legend>
+          <label>Mascot <input type="text" name="mascot" value="Courageous Needlefish" required></label>
+          <label>Divider <input type="text" name="divider" value="~" required></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Image</legend>
+          <label>Upload Image <input type="file" name="picture" accept="image/*"></label>
+          <label>Image Caption <input type="text" name="caption" value="At a pumpkin patch 2024" required></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Personal Info</legend>
+          <label>Personal Background <textarea name="personalBg" required>I have lived in North Carolina for my entire life, however all of my family besides my parents live up north.</textarea></label>
+          <label>Professional Background <textarea name="professionalBg" required>I currently work at MAC’S Speed Shop and Blueline Technologies, Inc.</textarea></label>
+          <label>Academic Background <textarea name="academicBg" required>I am majoring in Computer Science and concentrating in software engineering.</textarea></label>
+          <label>Primary Computer <input type="text" name="computer" value="Custom, Win 11 Pro, Desktop, Desk in my room." required></label>
+          <label>Personal Statement <textarea name="personalStatement" required>I am a junior at UNCC, majoring in Computer Science and concentrating in software engineering. I love outdoor activities such as fishing, biking, and hiking. I also enjoy gaming as well. I'm big on food, especially sushi being one of my favorites and I always like to try new things.</textarea></label>
+        </fieldset>
+
+        <fieldset id="coursesContainer">
+          <legend>Courses</legend>
+          <div class="course">
+            <input type="text" name="dept[]" value="ITSC" placeholder="Dept" required>
+            <input type="text" name="num[]" value="3160" placeholder="Number" required>
+            <input type="text" name="name[]" value="Database Design and Implementation" placeholder="Name" required>
+            <input type="text" name="reason[]" value="Required for my major but interesting." placeholder="Reason" required>
+            <div class="course-actions">
+              <button type="button" class="deleteCourse">Delete</button>
+            </div>
+          </div>
+          <button type="button" id="addCourse">+ Add Course</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Quote</legend>
+          <label>Quote <input type="text" name="quote" value="Pain is inevitable. Suffering is optional." required></label>
+          <label>Author <input type="text" name="author" value="Haruki Murakami" required></label>
+        </fieldset>
+
+        <div class="buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+          <button type="button" id="clearButton">Clear</button>
+        </div>
+      </form>
+
+      <div id="result"></div>
+    </div>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="scripts/HTMLInclude.js"></script>
+  <script src="scripts/introduction.js"></script>
+</body>
+</html>

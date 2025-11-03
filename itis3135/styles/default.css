@@ -49,6 +49,10 @@ footer {
     letter-spacing: 1px;
 }
 
+footer .page {
+  text-align: center;
+}
+
 figure {
     font-style: italic;
 }
