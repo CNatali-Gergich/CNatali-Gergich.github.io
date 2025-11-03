@@ -15,6 +15,15 @@
       max-width: 800px;
       margin: 0 auto;
     }
+    /* Ensure generated result inherits default site styles */
+    #result .card {
+      background: inherit;
+      color: inherit;
+      font-family: 'Montserrat', sans-serif;
+      box-shadow: inherit;
+      border-radius: inherit;
+      padding: inherit;
+    }
     form {
       background: #fff;
       padding: 2rem;
@@ -89,7 +98,6 @@
       margin: 1rem auto;
       max-width: 300px;
       max-height: 300px;
-      border-radius: 8px;
     }
 
     /* === Modal Styles === */
@@ -185,7 +193,7 @@
         <fieldset>
           <legend>Personal Info</legend>
           <label>Personal Background <textarea name="personalBg" required>I have lived in North Carolina for my entire life, however all of my family besides my parents live up north.</textarea></label>
-          <label>Professional Background <textarea name="professionalBg" required>I currently work at MAC’S Speed Shop and Blueline Technologies, Inc.</textarea></label>
+          <label>Professional Background <textarea name="professionalBg" required>I currently work at MAC'S Speed Shop and Blueline Technologies, Inc.</textarea></label>
           <label>Academic Background <textarea name="academicBg" required>I am majoring in Computer Science and concentrating in software engineering.</textarea></label>
           <label>Primary Computer <input type="text" name="computer" value="Custom, Win 11 Pro, Desktop, Desk in my room." required></label>
           <label>Personal Statement <textarea name="personalStatement" required>I am a junior at UNCC, majoring in Computer Science and concentrating in software engineering. I love outdoor activities such as fishing, biking, and hiking. I also enjoy gaming as well. I'm big on food, especially sushi being one of my favorites and I always like to try new things.</textarea></label>
@@ -193,15 +201,57 @@
 
         <fieldset id="coursesContainer">
           <legend>Courses</legend>
+
           <div class="course">
-            <input type="text" name="dept[]" value="ITSC" placeholder="Dept" required>
-            <input type="text" name="num[]" value="3160" placeholder="Number" required>
-            <input type="text" name="name[]" value="Database Design and Implementation" placeholder="Name" required>
-            <input type="text" name="reason[]" value="Required for my major but interesting." placeholder="Reason" required>
+            <input type="text" name="dept" value="ITSC" placeholder="Dept" required>
+            <input type="text" name="num" value="3160" placeholder="Number" required>
+            <input type="text" name="name" value="Database Design and Implementation" placeholder="Course Name" required>
+            <input type="text" name="reason" value="This class is required for my major but is also interesting." placeholder="Reason" required>
             <div class="course-actions">
               <button type="button" class="deleteCourse">Delete</button>
             </div>
           </div>
+
+          <div class="course">
+            <input type="text" name="dept" value="ITIS" placeholder="Dept" required>
+            <input type="text" name="num" value="3135" placeholder="Number" required>
+            <input type="text" name="name" value="Front-End Web Application Development" placeholder="Course Name" required>
+            <input type="text" name="reason" value="This class is also required for my major but I want to know as much as possible." placeholder="Reason" required>
+            <div class="course-actions">
+              <button type="button" class="deleteCourse">Delete</button>
+            </div>
+          </div>
+
+          <div class="course">
+            <input type="text" name="dept" value="STAT" placeholder="Dept" required>
+            <input type="text" name="num" value="2122" placeholder="Number" required>
+            <input type="text" name="name" value="Intro to Prob & Stat" placeholder="Course Name" required>
+            <input type="text" name="reason" value="Required math course." placeholder="Reason" required>
+            <div class="course-actions">
+              <button type="button" class="deleteCourse">Delete</button>
+            </div>
+          </div>
+
+          <div class="course">
+            <input type="text" name="dept" value="ITSC" placeholder="Dept" required>
+            <input type="text" name="num" value="2181" placeholder="Number" required>
+            <input type="text" name="name" value="Introduction to Computer Systems" placeholder="Course Name" required>
+            <input type="text" name="reason" value="Required for my major but good information to know." placeholder="Reason" required>
+            <div class="course-actions">
+              <button type="button" class="deleteCourse">Delete</button>
+            </div>
+          </div>
+
+          <div class="course">
+            <input type="text" name="dept" value="ITSC" placeholder="Dept" required>
+            <input type="text" name="num" value="3155" placeholder="Number" required>
+            <input type="text" name="name" value="Software Engineering" placeholder="Course Name" required>
+            <input type="text" name="reason" value="This is what I'm here for." placeholder="Reason" required>
+            <div class="course-actions">
+              <button type="button" class="deleteCourse">Delete</button>
+            </div>
+          </div>
+
           <button type="button" id="addCourse">+ Add Course</button>
         </fieldset>
 
