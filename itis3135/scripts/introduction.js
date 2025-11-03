@@ -84,45 +84,53 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Build results
-  function showResults() {
-    const data = Object.fromEntries(new FormData(form).entries());
-    const fileInput = form.querySelector("input[name='picture']");
-    let imageURL = "images/IMG_0356.jpg";
+function showResults() {
+  const data = Object.fromEntries(new FormData(form).entries());
+  const fileInput = form.querySelector("input[name='picture']");
+  let imageURL = "images/IMG_0356.jpg";
 
-    if (fileInput.files && fileInput.files[0]) {
-      imageURL = URL.createObjectURL(fileInput.files[0]);
-    }
+  if (fileInput.files && fileInput.files[0]) {
+    imageURL = URL.createObjectURL(fileInput.files[0]);
+  }
 
-    const courseList = Array.from(form.querySelectorAll(".course")).map(course => {
-      const [dept, num, name, reason] = course.querySelectorAll("input");
-      return `<li><strong>${dept.value} ${num.value} — ${name.value}:</strong> ${reason.value}</li>`;
-    }).join("");
+  const courseList = Array.from(form.querySelectorAll(".course")).map(course => {
+    const [dept, num, name, reason] = course.querySelectorAll("input");
+    return `<li><strong>${dept.value} ${num.value} — ${name.value}:</strong> ${reason.value}</li>`;
+  }).join("");
 
-    resultDiv.innerHTML = `
-      <h2>Introduction</h2>
-      <h2>${data.firstName} ${data.lastName}</h2>
+  // ✅ Perfect clone of introduction.html (NO "Introduction Form" heading)
+  resultDiv.innerHTML = `
+    <div class="card">
+      <h2 style="text-align:center;">Introduction</h2>
+      <h2 style="text-align:center;">${data.firstName} ${data.lastName}</h2>
       <figure>
-        <img src="${imageURL}" alt="Photo of ${data.firstName}">
-        <figcaption>${data.caption}</figcaption>
+        <img src="${imageURL}" alt="Photo of ${data.firstName}" style="max-width:300px; max-height:300px; display:block; margin:1rem auto;">
+        <figcaption style="text-align:center;">${data.caption}</figcaption>
       </figure>
-      <p>${data.personalStatement}</p>
+
+      <p>
+        ${data.personalStatement}
+      </p>
+
       <ul>
         <li><strong>Personal Background:</strong> ${data.personalBg}</li>
         <li><strong>Professional Background:</strong> ${data.professionalBg}</li>
         <li><strong>Academic Background:</strong> ${data.academicBg}</li>
         <li><strong>Primary Computer:</strong> ${data.computer}</li>
-        <li><strong>Courses I'm Taking, & Why:</strong>
+        <li>
+          <strong>Courses I'm Taking, & Why:</strong>
           <ul>${courseList}</ul>
         </li>
       </ul>
-      <blockquote style="text-align:center;">
+
+      <blockquote style="text-align:center; margin-top:2rem;">
         <p>“${data.quote}”</p>
         <footer>- ${data.author}</footer>
       </blockquote>
-      <p style="text-align:center; margin-top:1rem;">
-        <a href="#" onclick="location.reload()">Reset Form</a>
-      </p>
-    `;
-    form.style.display = "none";
-  }
+    </div>
+  `;
+
+  // Hide form entirely so only the intro displays
+  form.style.display = "none";
+}
 });
