@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christian Natali-Gergich Courageous Needlefish | ITIS3135 Project Overview</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="introduction">
+
+  <!-- Include Header -->
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <div class="card">
+      <h2>Project Overview</h2>
+      <p>
+        This project is a web application created for <strong>Lev “valorn987” Sladkov</strong>, 
+        a gaming content creator who streams under the handle <strong>valorn987</strong> 
+        on both Twitch and YouTube. The purpose of the website is to provide a professional 
+        online hub that showcases his gaming highlights, connects fans to his social platforms, 
+        and helps him find new players to collaborate and play with. The site will improve 
+        visibility of his content and offer a single destination where followers and potential 
+        teammates can learn about his gaming journey.
+      </p>
+
+      <h3>Intended Users</h3>
+      <ul>
+        <li>Fans and followers who want to learn more about Valorn and his streams.</li>
+        <li>Potential collaborators or teammates looking to play with him.</li>
+        <li>Sponsors or organizations interested in his gaming content and community reach.</li>
+      </ul>
+
+      <h3>Overview of the Website Content</h3>
+      <ul>
+        <li>Personal information about Lev “valorn987” Sladkov and his gaming background.</li>
+        <li>Embedded highlight videos from Twitch and YouTube.</li>
+        <li>Information about streaming schedule, gaming setup, and favorite titles.</li>
+        <li>Contact and collaboration forms for other players and sponsors.</li>
+        <li>Social media links and contact information.</li>
+      </ul>
+
+      <h3>Client Information</h3>
+      <ul>
+        <li><strong>Name:</strong> Lev “valorn987” Sladkov</li>
+        <li><strong>Alias / Brand:</strong> Valorn Gaming (Twitch/YouTube: valorn987)</li>
+        <li><strong>Email:</strong> [private]</li>
+        <li><strong>Discord:</strong> .valorn</li>
+        <li><strong>Slogan:</strong> “Streaming, creating, and connecting with players worldwide.”</li>
+      </ul>
+
+      <h3>Wireframe</h3>
+      <p>
+        The wireframe for this project was created using <strong>Draw.io</strong>. 
+        It outlines the layout for the homepage of the Valorn Gaming website, including a top navigation bar, 
+        featured stream/video section, introduction text, highlights gallery, and a consistent footer across all pages.
+      </p>
+      <figure>
+        <img src="images/wireframe.png" alt="Wireframe layout for the Valorn Gaming homepage" 
+            style="max-width:100%; height:auto; border:1px solid #ccc; border-radius:8px;">
+        <figcaption>Figure 1. Wireframe for the Valorn Gaming homepage created with Draw.io.</figcaption>
+      </figure>
+
+      <h3>Site Map</h3>
+      <p>
+        The site map below shows the navigation structure of the Valorn Gaming website. 
+        The Home page connects to five primary subpages — About, Content, Schedule, Collab / Play With Me, and Contact — 
+        each focusing on different aspects of Lev's gaming content and community engagement.
+      </p>
+      <figure>
+        <img src="images/sitemap.png" alt="Sitemap diagram showing navigation between Valorn Gaming pages"
+            style="max-width:100%; height:auto; border:1px solid #ccc; border-radius:8px;">
+        <figcaption>Figure 2. Sitemap showing navigation flow for the Valorn Gaming website.</figcaption>
+      </figure>
+
+      <h3>Page Designs</h3>
+      <ol>
+        <li><strong>Home (index.html):</strong> Introduces the Valorn brand, slogan, and featured video. Includes navigation to all other sections and an embedded highlight video that updates dynamically.</li>
+        <li><strong>About (about.html):</strong> Shares Lev's story, gaming background, and setup. Audience: fans and collaborators.</li>
+        <li><strong>Content (content.html):</strong> Displays embedded clips from Twitch and YouTube with interactive thumbnails and lightbox interactivity. Audience: general visitors.</li>
+        <li><strong>Schedule (schedule.html):</strong> Features an interactive JavaScript calendar showing Lev's upcoming streams, collaborations, and events. Audience: returning viewers and teammates.</li>
+        <li><strong>Collab / Play With Me (collab.html):</strong> Page for players interested in teaming up. Includes a contact form with basic validation.</li>
+        <li><strong>Contact / Links (contact.html):</strong> Contains official social links, Discord tag, and validated contact form for sponsors and fans.</li>
+      </ol>
+
+      <h3>Dynamic Functionality</h3>
+      <ul>
+        <li><strong>Interactive Video Gallery:</strong> JavaScript-driven gallery on the Content page that allows users to expand and view embedded Twitch and YouTube clips dynamically.</li>
+        <li><strong>Interactive Calendar:</strong> A jQuery UI-powered datepicker on the Schedule page allows users to click a date to view upcoming streams or events.</li>
+        <li><strong>Form Validation:</strong> JavaScript validation on the Collab and Contact pages ensures all required fields are completed before submission. Uses a front-end form integrated with FormSubmit.co to send messages directly to the client's email. No server-side code or database storage is required, keeping the site secure and lightweight.</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Include Footer -->
+  <div data-include="components/footer.html"></div>
+
+  <script src="scripts/HTMLInclude.js"></script>
+</body>
+</html>
