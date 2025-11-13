@@ -6,9 +6,13 @@
   <title>Christian Natali-Gergich Courageous Needlefish | ITIS3135 Introduction Form</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/default.css">
+  <!-- ⭐ Add Highlight.js here -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
   <style>
-    form, form input, form textarea, form label, h2, h3, form ul, form li, form p {
+    form, form input, form textarea, form label, form h2, form h3, form ul, form li, form p {
       text-align: left;
     }
     main {
@@ -261,6 +265,8 @@
           <button type="submit">Submit</button>
           <button type="reset">Reset</button>
           <button type="button" id="clearButton">Clear</button>
+          <button type="button" id="generateJSON">Generate JSON</button>
+          <button type="button" id="generateHTML">Generate HTML</button>
         </div>
       </form>
 
@@ -272,5 +278,7 @@
 
   <script src="scripts/HTMLInclude.js"></script>
   <script src="scripts/introduction.js"></script>
+  <script src="scripts/generate_html.js"></script>
+  <script src="scripts/generate_json.js"></script>
 </body>
 </html>
