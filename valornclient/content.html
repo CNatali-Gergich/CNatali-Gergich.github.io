@@ -5,18 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Content | Valorn Gaming</title>
   <link rel="stylesheet" href="styles/default.css">
-  <script src="scripts/HTMLInclude.js"></script>
 </head>
 <body>
   <div data-include="components/header.html"></div>
 
   <main>
     <div class="card">
-      <h2>Highlight Clips</h2>
-      <div class="video-gallery">
-        <iframe width="300" height="170" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-        <iframe width="300" height="170" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-        <iframe width="300" height="170" src="https://www.youtube.com/embed/ysz5S6PUM-U"></iframe>
+      <h2>Content</h2>
+      <p>Explore Valorn's Twitch streams and YouTube videos below!</p>
+
+      <h3>Recent Twitch Stream</h3>
+      <div class="video-container">
+        <iframe
+          src="https://player.twitch.tv/?video=2615040333&parent=cnatali-gergich.github.io"
+          height="378"
+          width="620"
+          allowfullscreen>
+        </iframe>
+        <p><a href="https://www.twitch.tv/videos/2615040333" target="_blank">Watch on Twitch →</a></p>
+      </div>
+
+      <h3>YouTube Channel</h3>
+      <div class="video-container">
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/u31qwQUeGuM"
+          title="Placeholder YouTube Video"
+          allowfullscreen></iframe>
+        <p><a href="https://youtube.com/@valorn987" target="_blank">Visit Valorn's YouTube Channel →</a></p>
+      </div>
+
+      <!-- Watch More Section -->
+      <div class="links">
+        <a href="https://twitch.tv/valorn987" target="_blank">Twitch</a> |
+        <a href="https://youtube.com/@valorn987" target="_blank">YouTube</a> |
+        <a href="https://discord.gg/" target="_blank">Discord</a>
       </div>
     </div>
   </main>

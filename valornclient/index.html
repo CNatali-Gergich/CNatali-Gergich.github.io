@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Valorn Gaming | Home</title>
   <link rel="stylesheet" href="styles/default.css">
-  <script src="scripts/HTMLInclude.js"></script>
 </head>
 <body>
   <div data-include="components/header.html"></div>
@@ -13,12 +12,35 @@
   <main>
     <div class="card">
       <h2>Welcome to Valorn Gaming</h2>
-      <p>Streaming. Creating. Connecting with players worldwide.</p>
+      <div id="live-banner" class="live-banner" style="display:none;">
+        🔴 <strong>LIVE NOW on <a href="https://twitch.tv/valorn987" target="_blank">Twitch</a>!</strong>
+      </div>
+      <p><strong>Streaming, Creating, and Connecting with Players Worldwide.</strong></p>
 
+      <h3>Latest YouTube Upload</h3>
       <div class="video-container">
         <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="Featured Stream"
+          src="https://www.youtube.com/embed/u31qwQUeGuM"
+          title="Valorn Latest YouTube Video"
+          allowfullscreen></iframe>
+      </div>
+
+      <h3>Highlights</h3>
+      <div class="video-gallery">
+        <!-- You can add your top Twitch clips or moments here -->
+        <iframe width="300" height="170"
+          src="https://player.twitch.tv/?video=2615040333&parent=cnatali-gergich.github.io"
+          title="Twitch Highlight 1"
+          allowfullscreen>
+        </iframe>
+        <iframe width="300" height="170"
+          src="https://www.youtube.com/embed/u31qwQUeGuM"
+          title="YouTube Highlight 2"
+          allowfullscreen>
+        </iframe>
+        <iframe width="300" height="170"
+          src="https://www.youtube.com/embed/u31qwQUeGuM"
+          title="YouTube Highlight 3"
           allowfullscreen>
         </iframe>
       </div>
@@ -26,6 +48,25 @@
   </main>
 
   <div data-include="components/footer.html"></div>
+  <script>
+    // Basic Twitch Live Checker (API-free)
+    const twitchUser = "valorn987";
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://player.twitch.tv/?channel=${twitchUser}&parent=cnatali-gergich.github.io`;
+    iframe.width = 1;
+    iframe.height = 1;
+    iframe.style.display = "none";
+    document.body.appendChild(iframe);
+
+    iframe.onload = () => {
+      document.getElementById("live-banner").style.display = "block";
+    };
+
+    iframe.onerror = () => {
+      document.getElementById("live-banner").style.display = "none";
+    };
+  </script>
+  <script src="scripts/HTMLInclude.js"></script>
   <script src="scripts/HTMLInclude.js"></script>
 </body>
 </html>
