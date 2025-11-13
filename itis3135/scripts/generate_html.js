@@ -25,7 +25,7 @@ document.getElementById("generateHTML").addEventListener("click", () => {
 
     // Build course list exactly like intro.html
     let coursesHTML = "";
-    document.querySelectorAll(".course").forEach(c => {
+    document.querySelectorAll(".course").forEach((c) => {
         const dept = c.querySelector("input[name='dept']").value;
         const num = c.querySelector("input[name='num']").value;
         const name = c.querySelector("input[name='name']").value;

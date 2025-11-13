@@ -20,7 +20,7 @@ document.getElementById("generateJSON").addEventListener("click", () => {
         courses: []
     };
 
-    document.querySelectorAll(".course").forEach(c => {
+    document.querySelectorAll(".course").forEach((c) => {
         data.courses.push({
             dept: c.querySelector("input[name='dept']").value,
             number: c.querySelector("input[name='num']").value,

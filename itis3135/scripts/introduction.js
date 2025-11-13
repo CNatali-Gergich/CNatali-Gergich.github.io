@@ -6,6 +6,58 @@ document.addEventListener("DOMContentLoaded", () => {
   const coursesContainer = document.getElementById("coursesContainer");
 
   // ---------------------------
+  // MODAL BUILDER
+  // ---------------------------
+  function openCourseModal() {
+    const modal = document.createElement("div");
+    modal.classList.add("modal-overlay");
+    modal.innerHTML = `
+      <div class="modal">
+        <h3>Add Course</h3>
+        <label>Prefix <input type="text" id="modalDept" required></label>
+        <label>Number <input type="text" id="modalNum" required></label>
+        <label>Course Name <input type="text" id="modalName" required></label>
+        <label>Reason <textarea id="modalReason" required></textarea></label>
+
+        <div class="modal-actions">
+          <button id="cancelModal">Cancel</button>
+          <button id="saveModal">Add</button>
+        </div>
+      </div>
+    `;
+    
+    document.body.appendChild(modal);
+
+    document.getElementById("cancelModal").onclick = () => modal.remove();
+    
+    document.getElementById("saveModal").onclick = () => {
+      const dept = modalDept.value.trim();
+      const num = modalNum.value.trim();
+      const name = modalName.value.trim();
+      const reason = modalReason.value.trim();
+
+      if (dept && num && name && reason) {
+        const newCourse = document.createElement("div");
+        newCourse.classList.add("course");
+        newCourse.innerHTML = `
+          <input type="text" name="dept" value="${dept}" required>
+          <input type="text" name="num" value="${num}" required>
+          <input type="text" name="name" value="${name}" required>
+          <input type="text" name="reason" value="${reason}" required>
+          <div class="course-actions">
+            <button type="button" class="deleteCourse">Delete</button>
+          </div>
+        `;
+        document.getElementById("coursesContainer")
+          .insertBefore(newCourse, document.getElementById("addCourse"));
+        modal.remove();
+      } else {
+        alert("Fill out all fields.");
+      }
+    };
+  }
+
+  // ---------------------------
   // SUBMIT → SHOW INTRO CARD
   // ---------------------------
   form.addEventListener("submit", (e) => {
@@ -22,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Build course list safely
     const courseList = Array.from(coursesContainer.querySelectorAll(".course"))
-      .map(course => {
+      .map((course) => {
         const dept = course.querySelector("input[name='dept']");
         const num = course.querySelector("input[name='num']");
         const name = course.querySelector("input[name='name']");
@@ -78,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------------------
   clearButton.addEventListener("click", () => {
     form.reset();
-    form.querySelectorAll("input, textarea").forEach(input => input.value = "");
+    form.querySelectorAll("input, textarea").forEach((input) => input.value = "");
   });
 
   // ---------------------------

@@ -12,7 +12,7 @@
   <script>hljs.highlightAll();</script>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
   <style>
-    form, form input, form textarea, form label, form h2, form h3, form ul, form li, form p {
+    form, form input, form textarea, form label, form ul, form li, form p {
       text-align: left;
     }
     main {
@@ -49,13 +49,14 @@
       margin-top: 0.8rem;
       font-weight: 500;
     }
-    input, textarea, select {
+    input, textarea, select, button, fieldset, .modal, .course {
       width: 100%;
       padding: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 6px;
       margin-top: 0.25rem;
       font-size: 1rem;
+      box-sizing: border-box;
     }
     textarea {
       min-height: 60px;
@@ -124,6 +125,7 @@
       width: 90%;
       max-width: 400px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-sizing: border-box;
     }
     .modal label {
       display: block;
@@ -135,6 +137,7 @@
       padding: 0.4rem;
       border: 1px solid #ccc;
       border-radius: 5px;
+      box-sizing: border-box;
     }
     .modal-actions {
       display: flex;
@@ -162,8 +165,8 @@
     }
 
     #result pre, 
-    #result code {
-        text-align: left !important;
+    #result pre code {
+        text-align: left;
         white-space: pre;
         font-family: Consolas, Menlo, monospace;
         font-size: 0.9rem;
