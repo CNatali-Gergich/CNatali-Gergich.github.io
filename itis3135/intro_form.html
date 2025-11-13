@@ -6,19 +6,22 @@
   <title>Christian Natali-Gergich Courageous Needlefish | ITIS3135 Introduction Form</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/default.css">
-  <!-- ⭐ Add Highlight.js here -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
   <style>
     form, form input, form textarea, form label, form h2, form h3, form ul, form li, form p {
       text-align: left;
     }
-    main {
-      max-width: 800px;
+    body.introduction main {
+      max-width: 1200px;
       margin: 0 auto;
     }
+
+    body.introduction .card {
+      max-width: 1200px;
+    }
+    
     /* Ensure generated result inherits default site styles */
     #result .card {
       background: inherit;
@@ -157,6 +160,41 @@
       color: white;
     }
 
+    /* ================================
+        Generated Code Output Formatting
+        ================================ */
+
+      /* Wrapper area for generated output */
+      #result {
+        width: 100%;
+        max-width: 900px;          /* stays within page layout */
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      /* Keep the code block controlled and left-aligned */
+      #result pre {
+        background: #f5f5f5;       /* light code background */
+        padding: 1rem;
+        border-radius: 8px;
+
+        text-align: left;          /* FORCE left alignment */
+        white-space: pre-wrap;     /* allow wrapping */
+        word-wrap: break-word;     /* break long strings */
+        overflow-x: auto;          /* scroll only if really needed */
+        max-width: 100%;           /* never exceed body */
+        box-sizing: border-box;    /* padding stays inside width */
+      }
+
+      /* Ensure <code> itself also left aligns */
+      #result code {
+        text-align: left;
+        display: block;
+        font-family: Consolas, Monaco, monospace;
+        line-height: 1.35;
+        font-size: 0.95rem;
+      }
+
     footer, footer .page, footer nav, footer p {
       text-align: center;
     }
@@ -262,7 +300,7 @@
         </fieldset>
 
         <div class="buttons">
-          <button type="submit">Submit</button>
+          <button type="submit" id="realSubmit">Submit</button>
           <button type="reset">Reset</button>
           <button type="button" id="clearButton">Clear</button>
           <button type="button" id="generateJSON">Generate JSON</button>
@@ -280,5 +318,12 @@
   <script src="scripts/introduction.js"></script>
   <script src="scripts/generate_html.js"></script>
   <script src="scripts/generate_json.js"></script>
+
+  <!-- Run Highlight.js AFTER the DOM is ready -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+      if (window.hljs) hljs.highlightAll();
+  });
+  </script>
 </body>
 </html>

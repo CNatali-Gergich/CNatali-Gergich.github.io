@@ -4,76 +4,83 @@ document.getElementById("generateHTML").addEventListener("click", () => {
 
     // Read basic fields
     const firstName = form.firstName.value;
-    const middle = form.middleName.value;
-    const nickname = form.nickname.value;
-    const lastName = form.lastName.value;
+    const lastName  = form.lastName.value;
+    const caption   = form.caption.value;
 
-    const mascot = form.mascot.value;
-    const divider = form.divider.value;
-
-    const caption = form.caption.value;
-
+    const personalStatement = form.personalStatement.value;
     const personalBg = form.personalBg.value;
     const professionalBg = form.professionalBg.value;
     const academicBg = form.academicBg.value;
     const computer = form.computer.value;
-    const personalStatement = form.personalStatement.value;
 
     const quote = form.quote.value;
     const author = form.author.value;
 
-    // Collect course list
+    // ⭐ Handle image (uploaded OR default)
+    let imageURL = "images/IMG_0356.jpg"; // default image
+    const fileInput = form.querySelector("input[name='picture']");
+    if (fileInput.files && fileInput.files[0]) {
+        imageURL = URL.createObjectURL(fileInput.files[0]); // user's image
+    }
+
+    // Build course list
     const courseDivs = document.querySelectorAll(".course");
     let coursesHTML = "";
 
+    let first = true;
     courseDivs.forEach(c => {
         let dept = c.querySelector("input[name='dept']").value;
         let num = c.querySelector("input[name='num']").value;
         let name = c.querySelector("input[name='name']").value;
         let reason = c.querySelector("input[name='reason']").value;
 
-        coursesHTML += `
-<li>
-  <strong>${dept} ${num}: ${name}</strong> - ${reason}
-</li>`;
+        if (first) {
+            // First course: one tab (4 spaces) less
+            coursesHTML += `    <li><strong>${dept} ${num} - ${name}:</strong> ${reason}</li>\n`;
+            first = false;
+        } else {
+            // All following courses stay the same as before
+        coursesHTML += `        <li><strong>${dept} ${num} - ${name}:</strong> ${reason}</li>\n`;
+        }
     });
 
-    // Build HTML output as a string literal
+    // ⭐ Final intro layout EXACTLY matching your real intro page
     const htmlOutput = `
-<h2>Introduction HTML</h2>
-
-<h3>${firstName} ${middle} ${lastName} ${divider} ${nickname}</h3>
+<h2>Introduction</h2>
+<h2>${firstName} ${lastName}</h2>
 
 <figure>
-  <img src="images/placeholder.jpg" alt="${caption}">
-  <figcaption>${caption}</figcaption>
+    <img src="${imageURL}" 
+         alt="Photo of ${firstName} ${lastName}" 
+         style="max-width:300px; max-height:300px; display:block; margin:1rem auto;">
+    <figcaption style="text-align:center;">${caption}</figcaption>
 </figure>
 
+<p>
+    ${personalStatement}
+</p>
+
 <ul>
-  <li><strong>Personal Background:</strong> ${personalBg}</li>
-  <li><strong>Professional Background:</strong> ${professionalBg}</li>
-  <li><strong>Academic Background:</strong> ${academicBg}</li>
-  <li><strong>Primary Computer:</strong> ${computer}</li>
+    <li><strong>Personal Background:</strong> ${personalBg}</li>
+    <li><strong>Professional Background:</strong> ${professionalBg}</li>
+    <li><strong>Academic Background:</strong> ${academicBg}</li>
+    <li><strong>Primary Computer:</strong> ${computer}</li>
+    <li><strong>Courses I'm Taking, & Why:</strong>
+        <ul>
+    ${coursesHTML}    </ul>
+    </li>
 </ul>
 
-<p>${personalStatement}</p>
-
-<h3>Courses</h3>
-<ul>
-${coursesHTML}
-</ul>
-
-<blockquote>
-  "${quote}" — ${author}
+<blockquote style="text-align:center; margin-top:2rem;">
+    <p>“${quote}”</p>
+    <footer>- ${author}</footer>
 </blockquote>
 `;
 
-    // Replace form with output
+    // Output to page WITHOUT navigation
     result.innerHTML = `
 <pre><code class="language-html">${htmlOutput.replace(/</g, "&lt;")}</code></pre>
 `;
-
-    document.querySelector("h2").innerText = "Introduction HTML";
 
     hljs.highlightAll();
 });
