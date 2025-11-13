@@ -2,7 +2,6 @@ document.getElementById("generateJSON").addEventListener("click", () => {
     const form = document.getElementById("introForm");
     const result = document.getElementById("result");
 
-    // Collect values
     const data = {
         firstName: form.firstName.value,
         middleInitial: form.middleName.value,
@@ -30,12 +29,12 @@ document.getElementById("generateJSON").addEventListener("click", () => {
         });
     });
 
-    // Display formatted JSON
-    result.innerHTML = `
-<pre><code class="language-json">${JSON.stringify(data, null, 2)}</code></pre>
-`;
+    // Pretty JSON with clean spacing
+    const jsonFormatted = JSON.stringify(data, null, 4);
 
-    document.querySelector("h2").innerText = "Introduction JSON";
+    result.innerHTML = `
+<pre><code class="language-json">${jsonFormatted}</code></pre>
+`;
 
     hljs.highlightAll();
 });
