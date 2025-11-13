@@ -5,30 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Collab | Valorn Gaming</title>
   <link rel="stylesheet" href="styles/default.css">
-  <script src="scripts/HTMLInclude.js"></script>
+  <script src="scripts/HTMLInclude.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="collab">
+
+  <!-- Include Header -->
   <div data-include="components/header.html"></div>
 
   <main>
     <div class="card">
       <h2>Collab / Play With Me</h2>
-      <p>Interested in teaming up or collaborating with Valorn? Fill out the form below.</p>
+      <p>Interested in teaming up or collaborating with Valorn? Fill out the form below!</p>
 
-      <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
-        <input type="hidden" name="_next" value="https://cnatali-gergich.github.io/valornclient/thankyou.html">
-        <label>Name:</label><br>
-        <input type="text" name="name" required><br><br>
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br><br>
-        <label>Message:</label><br>
-        <textarea name="message" rows="5" required></textarea><br><br>
-        <button type="submit">Send</button>
+      <form id="collab-form" action="https://formsubmit.co/valornplaceholder@gmail.com" method="POST">
+        <!-- Replace email above when his real Gmail is created -->
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="platform">Gaming Platform:</label>
+        <select id="platform" name="platform" required>
+          <option value="">Select One</option>
+          <option value="PC">PC</option>
+          <option value="PlayStation">PlayStation</option>
+          <option value="Xbox">Xbox</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <!-- Hidden fields -->
+        <input type="hidden" name="_subject" value="New Collaboration Request for Valorn!">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <button type="submit">Send Message</button>
       </form>
     </div>
   </main>
 
+  <!-- Include Footer -->
   <div data-include="components/footer.html"></div>
+
   <script src="scripts/HTMLInclude.js"></script>
 </body>
 </html>
