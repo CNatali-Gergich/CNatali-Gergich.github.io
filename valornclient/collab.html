@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collab | Valorn Gaming</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="scripts/HTMLInclude.js"></script>
+</head>
+<body>
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <div class="card">
+      <h2>Collab / Play With Me</h2>
+      <p>Interested in teaming up or collaborating with Valorn? Fill out the form below.</p>
+
+      <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+        <input type="hidden" name="_next" value="https://cnatali-gergich.github.io/valornclient/thankyou.html">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+        <label>Message:</label><br>
+        <textarea name="message" rows="5" required></textarea><br><br>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+  <script src="scripts/HTMLInclude.js"></script>
+</body>
+</html>
