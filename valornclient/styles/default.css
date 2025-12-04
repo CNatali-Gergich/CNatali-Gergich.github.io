@@ -15,6 +15,18 @@ body {
   flex-direction: column;
 }
 
+/* ========== GLOBAL LINKS ========== */
+a {
+  color: #FF8200;          /* orange accent */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #746F72;          /* dim grey on hover */
+}
+
+
 /* ========== HEADER ========== */
 header {
   background-color: #746F72; /* dim grey */
@@ -108,17 +120,6 @@ main {
   margin-top: 1rem;
   text-align: center;
   font-size: 1.1rem;
-}
-
-.links a {
-  color: #FF8200;       /* orange */
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0 0.3rem;
-}
-
-.links a:hover {
-  color: #746F72;       /* dim grey */
 }
 
 /* ========== FORM STYLING ========== */
