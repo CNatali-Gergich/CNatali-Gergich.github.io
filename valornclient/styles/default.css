@@ -16,8 +16,8 @@ body {
 }
 
 /* ========== GLOBAL LINKS ========== */
-a {
-  color: #FF8200;          /* orange accent */
+a {  color: #FF8200;          /* orange accent */
+
   text-decoration: none;
   font-weight: 600;
 }
@@ -36,13 +36,6 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-header h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
-}
-
 header nav a {
   color: #FF8200; /* orange */
   text-decoration: none;
@@ -53,6 +46,11 @@ header nav a {
 
 header nav a:hover {
   color: #FFFFFF; /* or #F9EA9A if you want a softer hover */
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 /* Theme toggle button in header */
@@ -90,14 +88,8 @@ main {
   box-shadow: 0 4px 24px rgba(44, 62, 80, 0.15);
   padding: 2rem 2.5rem;
   max-width: 900px;
-  width: 100%;
   text-align: center;
   margin-bottom: 3rem;
-}
-
-.card h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
 }
 
 /* ========== VIDEO SECTIONS ========== */
@@ -140,7 +132,6 @@ form label {
 form input,
 form textarea,
 form select {
-  width: 100%;
   padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -175,11 +166,11 @@ form button:hover {
   font-size: 0.9rem;
 }
 
-.form-status.error {
+.form-status-error {
   color: #d32f2f;
 }
 
-.form-status.success {
+.form-status-success {
   color: #2e7d32;
 }
 
@@ -199,7 +190,7 @@ form button:hover {
   margin-top: 0.75rem;
 }
 
-.about-more.open {
+.about-more-open {
   display: block;
 }
 
@@ -279,7 +270,7 @@ body.dark-theme .card {
     padding: 1.5rem;
   }
 
-  header h1 {
+  h1 {
     font-size: 1.4rem;
   }
 

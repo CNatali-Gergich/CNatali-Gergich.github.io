@@ -10,10 +10,8 @@
     - Collab form character counter + validation
 */
 
-document.addEventListener('DOMContentLoaded', () => {
-  // =========================
+document.addEventListener('DOMContentLoaded', () => { 
   // DARK MODE TOGGLE (all pages)
-  // =========================
   const body = document.body;
   const storedTheme = localStorage.getItem('valorn-theme');
 
@@ -32,9 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('valorn-theme', isDark ? 'dark' : 'light');
   });
 
-  // =========================
   // TWITCH LIVE BANNER (home page only)
-  // =========================
   const liveBanner = document.getElementById('live-banner');
 
   if (liveBanner) {
@@ -50,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(iframe);
 
     iframe.onload = () => {
-      liveBanner.style.display = 'block';
+      liveBanner.style.display = 'inline-block';
     };
 
     iframe.onerror = () => {
@@ -62,22 +58,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // =========================
   // ABOUT PAGE "READ MORE" TOGGLE
-  // =========================
   const aboutToggleButton = document.getElementById('about-toggle');
   const aboutMore = document.getElementById('about-more');
 
   if (aboutToggleButton && aboutMore) {
     aboutToggleButton.addEventListener('click', () => {
-      const isOpen = aboutMore.classList.toggle('open');
+      const isOpen = aboutMore.classList.toggle('about-more-open');
       aboutToggleButton.textContent = isOpen ? 'Show less' : 'Read more';
     });
   }
 
-  // =========================
   // COLLAB FORM: CHAR COUNTER + VALIDATION
-  // =========================
   const collabForm = document.getElementById('collab-form');
 
   if (collabForm) {
