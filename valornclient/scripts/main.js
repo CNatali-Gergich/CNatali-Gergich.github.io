@@ -11,26 +11,30 @@
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // DARK MODE TOGGLE (header)
-  const themeToggleButton = document.querySelector('[data-theme-toggle]');
+  // =========================
+  // DARK MODE TOGGLE (all pages)
+  // =========================
+  const body = document.body;
+  const storedTheme = localStorage.getItem('valorn-theme');
 
-  if (themeToggleButton) {
-    const body = document.body;
-    const storedTheme = localStorage.getItem('valorn-theme');
-
-    if (storedTheme === 'dark') {
-      body.classList.add('dark-theme');
-      themeToggleButton.textContent = 'Light Mode';
-    }
-
-    themeToggleButton.addEventListener('click', () => {
-      const isDark = body.classList.toggle('dark-theme');
-      themeToggleButton.textContent = isDark ? 'Light Mode' : 'Dark Mode';
-      localStorage.setItem('valorn-theme', isDark ? 'dark' : 'light');
-    });
+  // Apply stored theme on load
+  if (storedTheme === 'dark') {
+    body.classList.add('dark-theme');
   }
 
+  // Use event delegation so it works even though header is injected
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-theme-toggle]');
+    if (!button) return;
+
+    const isDark = body.classList.toggle('dark-theme');
+    button.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    localStorage.setItem('valorn-theme', isDark ? 'dark' : 'light');
+  });
+
+  // =========================
   // TWITCH LIVE BANNER (home page only)
+  // =========================
   const liveBanner = document.getElementById('live-banner');
 
   if (liveBanner) {
@@ -53,13 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
       liveBanner.style.display = 'none';
     };
 
-    // Optional: clicking the banner opens Twitch in a new tab
     liveBanner.addEventListener('click', () => {
       window.open('https://twitch.tv/valorn987', '_blank');
     });
   }
 
+  // =========================
   // ABOUT PAGE "READ MORE" TOGGLE
+  // =========================
   const aboutToggleButton = document.getElementById('about-toggle');
   const aboutMore = document.getElementById('about-more');
 
@@ -70,7 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // =========================
   // COLLAB FORM: CHAR COUNTER + VALIDATION
+  // =========================
   const collabForm = document.getElementById('collab-form');
 
   if (collabForm) {
@@ -111,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formStatus.classList.remove('hidden', 'error');
         formStatus.classList.add('success');
       }
-      // Allow normal submit to formsubmit.co
+      // allow normal submit to formsubmit.co
     });
   }
 });
