@@ -1,24 +1,43 @@
+<!--about.html-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Valorn Gaming</title>
+  <title>Valorn Gaming | Home</title>
   <link rel="stylesheet" href="styles/default.css">
-  <script src="scripts/HTMLInclude.js"></script>
+  <script src="scripts/HTMLInclude.js" defer></script>
+  <script src="scripts/main.js" defer></script>
 </head>
 <body>
   <div data-include="components/header.html"></div>
 
-  <main>
-    <div class="card">
-      <h2>About Valorn</h2>
-      <img src="images/valorn_logo.png" alt="Valorn Gaming Logo" style="max-width:200px;">
-      <p>Lev “valorn987” Sladkov is a gaming content creator and community builder, streaming on Twitch and YouTube. His mission is to bring people together through creativity, teamwork, and fun competition.</p>
+<main>
+  <div class="card">
+    <h2>About Valorn</h2>
+    <img src="images/valorn_logo.png" alt="Valorn Gaming Logo" style="max-width:200px;">
+
+    <p>
+      Lev “valorn987” Sladkov is a gaming content creator and community builder,
+      streaming on Twitch and YouTube. His mission is to bring people together
+      through creativity, teamwork, and fun competition.
+    </p>
+
+    <button id="about-toggle" class="about-toggle">Read more</button>
+
+    <div id="about-more" class="about-more">
+      <p>
+        When Valorn isn't live, he's planning new stream ideas, editing videos,
+        and looking for ways to involve his community in every project. From
+        ranked grinds and challenge runs to community nights and collabs,
+        Valorn focuses on keeping streams positive, interactive, and welcoming
+        for players of all skill levels.
+      </p>
     </div>
-  </main>
+  </div>
+</main>
+
 
   <div data-include="components/footer.html"></div>
-  <script src="scripts/HTMLInclude.js"></script>
 </body>
 </html>

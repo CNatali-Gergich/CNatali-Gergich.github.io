@@ -8,8 +8,8 @@
 /* ========== BODY & BACKGROUND ========== */
 body {
   font-family: 'Montserrat', Arial, sans-serif;
-  background: linear-gradient(135deg, #d9e7ff 0%, #f0f4ff 100%);
-  color: #111;
+  background: linear-gradient(135deg, #F9EA9A 0%, #FFFFFF 100%);
+  color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,8 +17,8 @@ body {
 
 /* ========== HEADER ========== */
 header {
-  background-color: #11161c;
-  color: #fff;
+  background-color: #746F72; /* dim grey */
+  color: #FFFFFF;
   text-align: center;
   padding: 1rem 0 1.5rem 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -32,7 +32,7 @@ header h1 {
 }
 
 header nav a {
-  color: #ff4c4c;
+  color: #FF8200; /* orange */
   text-decoration: none;
   margin: 0 0.5rem;
   font-weight: 500;
@@ -40,7 +40,26 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #ff99cc;
+  color: #FFFFFF; /* or #F9EA9A if you want a softer hover */
+}
+
+/* Theme toggle button in header */
+.theme-toggle-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: #FF8200;
+  color: #000000;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 /* ========== MAIN LAYOUT ========== */
@@ -84,10 +103,31 @@ main {
   gap: 1rem;
 }
 
+/* ========== LINKS (Content page) ========== */
+.links {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.links a {
+  color: #FF8200;       /* orange */
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 0.3rem;
+}
+
+.links a:hover {
+  color: #746F72;       /* dim grey */
+}
+
 /* ========== FORM STYLING ========== */
 form {
   text-align: left;
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 form label {
@@ -97,34 +137,107 @@ form label {
 }
 
 form input,
-form textarea {
+form textarea,
+form select {
   width: 100%;
   padding: 0.6rem;
-  margin-bottom: 1rem;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 1rem;
 }
 
 form button {
-  background-color: #11161c;
-  color: #fff;
+  background-color: #FF8200;
+  color: #000000;
   padding: 0.7rem 1.5rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 form button:hover {
-  background-color: #333;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* ========== COLLAPSE/STATUS HELPERS ========== */
+.message-count {
+  font-size: 0.85rem;
+  color: #746F72;
+  margin-top: 0.25rem;
+}
+
+.form-status {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-status.error {
+  color: #d32f2f;
+}
+
+.form-status.success {
+  color: #2e7d32;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ========== ABOUT PAGE TOGGLE ========== */
+.about-toggle {
+  margin-top: 0.75rem;
+  cursor: pointer;
+  padding: 0.3rem 0.75rem;
+}
+
+.about-more {
+  display: none;
+  margin-top: 0.75rem;
+}
+
+.about-more.open {
+  display: block;
+}
+
+/* ========== LIVE BANNER (HOME) ========== */
+.live-banner {
+  display: none;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  background: #FF8200; /* orange */
+  color: #000000;
+  border-radius: 6px;
+  font-weight: 700;
+  width: fit-content;
+  animation: pulse 1s infinite alternate;
+  cursor: pointer;
+}
+
+.live-banner a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+@keyframes pulse {
+  from { opacity: 1; }
+  to   { opacity: 0.6; }
+}
+
+/* ========== CALENDAR CONTAINER ========== */
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
 }
 
 /* ========== FOOTER ========== */
 footer {
-  background-color: #11161c;
-  color: #fff;
+  background-color: #746F72; /* dim grey */
+  color: #FFFFFF;
   text-align: center;
   padding: 1rem 0;
   font-size: 0.95rem;
@@ -133,20 +246,30 @@ footer {
 }
 
 footer a {
-  color: #ff4c4c;
+  color: #FF8200;
   text-decoration: none;
   font-weight: 500;
   margin: 0 0.3rem;
 }
 
 footer a:hover {
-  color: #ff99cc;
+  color: #FFFFFF;
 }
 
 /* ========== IMAGE & MEDIA ========== */
 img {
   max-width: 100%;
   border-radius: 8px;
+}
+
+/* ========== DARK MODE THEME ========== */
+body.dark-theme {
+  background: #121212;
+  color: #f5f5f5;
+}
+
+body.dark-theme .card {
+  background-color: #1e1e1e;
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
@@ -163,81 +286,4 @@ img {
     width: 100%;
     height: auto;
   }
-
-  .live-banner {
-  background: #ff0000;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-weight: 700;
-  margin: 1rem auto;
-  width: fit-content;
-  animation: pulse 1s infinite alternate;
-}
-
-.live-banner a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-@keyframes pulse {
-  from { opacity: 1; }
-  to { opacity: 0.6; }
-}
-
-.links {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-.links a {
-  color: #ff4c4c;
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0 0.3rem;
-}
-
-.links a:hover {
-  color: #ff99cc;
-}
-
-.calendar-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.5rem 0;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 1rem;
-  text-align: left;
-}
-
-label {
-  font-weight: bold;
-}
-
-input, textarea, select, button {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1rem;
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-button {
-  background-color: #11161c;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background-color: #ff0040;
-}
-
 }
