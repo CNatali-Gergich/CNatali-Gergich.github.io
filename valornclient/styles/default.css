@@ -54,10 +54,6 @@ header nav a:hover {
   color: #FFFFFF; /* or #F9EA9A if you want a softer hover */
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
 
 h2 {
   font-size: 1.8rem;
