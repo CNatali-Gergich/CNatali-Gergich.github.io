@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valorn Gaming | Home</title>
+  <title>Valorn Gaming | Collab</title>
   <link rel="stylesheet" href="styles/default.css">
   <script src="scripts/HTMLInclude.js" defer></script>
   <script src="scripts/main.js" defer></script>
@@ -39,7 +39,18 @@
         </select>
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          maxlength="300"
+          required></textarea>
+
+        <p id="message-count" class="message-count">
+          300 characters remaining
+        </p>
+
+        <div id="form-status" class="form-status hidden" aria-live="polite"></div>
 
         <!-- Hidden fields -->
         <input type="hidden" name="_subject" value="New Collaboration Request for Valorn!">

@@ -1,6 +1,6 @@
 /*
   File: main.js
-  Author: Your Name
+  Author: Christian N-G
   Project: Valorn Gaming Client Site
   Description:
     Site-wide interactivity:
@@ -99,16 +99,16 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault(); // only block if fields missing
         if (formStatus) {
           formStatus.textContent = 'Please fill in all fields before sending.';
-          formStatus.classList.remove('hidden', 'success');
-          formStatus.classList.add('error');
+          formStatus.classList.remove('hidden', 'form-status-success');
+          formStatus.classList.add('form-status-error');
         }
         return;
       }
 
       if (formStatus) {
         formStatus.textContent = 'Sending your message...';
-        formStatus.classList.remove('hidden', 'error');
-        formStatus.classList.add('success');
+        formStatus.classList.remove('hidden', 'form-status-error');
+        formStatus.classList.add('form-status-success');
       }
       // allow normal submit to formsubmit.co
     });

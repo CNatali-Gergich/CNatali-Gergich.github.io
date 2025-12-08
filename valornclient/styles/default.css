@@ -107,6 +107,12 @@ main {
   gap: 1rem;
 }
 
+/* Give the Twitch highlight the same spacing as the iframes */
+.video-gallery .twitch-highlight {
+  margin: 1rem;
+  display: inline-block; /* keeps it behaving like the others */
+}
+
 /* ========== LINKS (Content page) ========== */
 .links {
   margin-top: 1rem;
