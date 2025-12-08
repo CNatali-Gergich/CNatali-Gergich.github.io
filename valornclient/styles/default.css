@@ -248,6 +248,33 @@ footer a:hover {
   color: #FFFFFF;
 }
 
+footer p {
+  margin: 0.2rem 0;
+}
+
+.footer-meta {
+  font-weight: 500;
+}
+
+.footer-credit {
+  font-size: 1.0rem;
+}
+
+.footer-links a {
+  margin: 0 0.35rem;
+}
+
+.footer-validators {
+  margin-top: 0.4rem;
+}
+
+.footer-validators img {
+  height: 24px;        /* smaller, cleaner badges */
+  width: auto;
+  margin: 0 0.25rem;
+  vertical-align: middle;
+}
+
 /* ========== IMAGE & MEDIA ========== */
 img {
   max-width: 100%;
