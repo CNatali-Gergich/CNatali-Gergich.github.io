@@ -16,14 +16,20 @@ body {
 }
 
 /* ========== GLOBAL LINKS ========== */
-a {  color: #B34700;          /* orange accent */
-
+a {
+  color: #B34700;          /* orange accent */
   text-decoration: none;
   font-weight: 600;
 }
 
-a:hover {
-  color: #000000;          /* black on hover */
+/* Light mode hover: black (main content only) */
+body:not(.dark-theme) main a:hover {
+  color: #000000;
+}
+
+/* Dark mode hover: white (main content only) */
+body.dark-theme main a:hover {
+  color: #FFFFFF;
 }
 
 
@@ -46,6 +52,11 @@ header nav a {
 
 header nav a:hover {
   color: #FFFFFF; /* or #F9EA9A if you want a softer hover */
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
