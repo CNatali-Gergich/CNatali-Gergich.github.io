@@ -16,14 +16,14 @@ body {
 }
 
 /* ========== GLOBAL LINKS ========== */
-a {  color: #FF8200;          /* orange accent */
+a {  color: #B34700;          /* orange accent */
 
   text-decoration: none;
   font-weight: 600;
 }
 
 a:hover {
-  color: #746F72;          /* dim grey on hover */
+  color: #000000;          /* black on hover */
 }
 
 
@@ -37,7 +37,7 @@ header {
 }
 
 header nav a {
-  color: #FF8200; /* orange */
+  color: #FFFFFF; /* white */
   text-decoration: none;
   margin: 0 0.5rem;
   font-weight: 500;
@@ -238,7 +238,7 @@ footer {
 }
 
 footer a {
-  color: #FF8200;
+  color: #FFFFFF;
   text-decoration: none;
   font-weight: 500;
   margin: 0 0.3rem;
