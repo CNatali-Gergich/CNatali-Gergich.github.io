@@ -58,6 +58,13 @@ header nav a:hover {
 h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 /* Theme toggle button in header */
@@ -95,8 +102,12 @@ main {
   box-shadow: 0 4px 24px rgba(44, 62, 80, 0.15);
   padding: 2rem 2.5rem;
   max-width: 900px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 3rem;
+}
+
+.card-intro {
+  text-align: center;
 }
 
 /* ========== VIDEO SECTIONS ========== */
@@ -105,6 +116,12 @@ main {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   margin: 1rem;
+  text-align: center;
+  display: inline-block;
+}
+
+.video-container {
+  text-align: center; /* center the iframe within the container */
 }
 
 .video-gallery {
@@ -125,6 +142,32 @@ main {
   margin-top: 1rem;
   text-align: center;
   font-size: 1.1rem;
+}
+
+/* ========== CONTACT LIST ICONS ========== */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-list img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Center the "Watch more on Twitch" link on home page */
+.watch-more {
+  margin-top: 1rem;
+  text-align: center;
 }
 
 /* ========== FORM STYLING ========== */
@@ -207,6 +250,11 @@ form button:hover {
   display: block;
 }
 
+.about-logo {
+  display: block;
+  margin: 0 auto 1rem;  /* center image and add a little space under it */
+}
+
 /* ========== LIVE BANNER (HOME) ========== */
 .live-banner {
   display: none;
@@ -275,6 +323,14 @@ footer p {
 
 .footer-links a {
   margin: 0 0.35rem;
+}
+
+.footer-links img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 0.25rem;
 }
 
 .footer-validators {

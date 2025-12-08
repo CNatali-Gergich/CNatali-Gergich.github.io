@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(iframe);
 
     iframe.onload = () => {
-      liveBanner.style.display = 'inline-block';
+      liveBanner.style.display = 'block';
     };
 
     iframe.onerror = () => {
